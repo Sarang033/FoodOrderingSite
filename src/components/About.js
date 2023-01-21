@@ -1,5 +1,5 @@
-const About = () =>{
-    return(
+const About = () => {
+    return (
         <div>
             <h1>About us page</h1>
             <p>
@@ -10,4 +10,4 @@ const About = () =>{
     )
 }
 
-export  default About;
+export default About;

@@ -1,8 +1,8 @@
-.header{
+.header {
     display: flex;
     justify-content: space-between;
     margin: 10px;
-    background-color:whitesmoke;
+    background-color: whitesmoke;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
     color: black;
@@ -10,29 +10,31 @@
     height: 65px;
 }
 
-.nav-items > ul{
+.nav-items>ul {
     list-style-type: none;
     display: flex;
     cursor: pointer;
     align-content: center;
 }
-.nav-items > ul > li{
-    padding: 8px 15px 5px 10px ;
-    font-size:20px;
+
+.nav-items>ul>li {
+    padding: 8px 15px 5px 10px;
+    font-size: 20px;
 }
 
-.logo{
+.logo {
     width: 60px;
 }
+
 /* Body CSS */
 
-.restaurant-list{
+.restaurant-list {
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
-.card{
+.card {
     width: 200px;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
@@ -41,19 +43,19 @@
     cursor: pointer;
 }
 
-.card > img{
+.card>img {
     width: 100%;
 }
 
-.card > span{
+.card>span {
     display: flex;
 }
 
-.card > span > h4{
+.card>span>h4 {
     padding-left: 5px;
 }
 
-.card > span > h4:first-child{
+.card>span>h4:first-child {
     display: flex;
     align-items: center;
     background-color: rgb(19, 176, 1);
@@ -62,43 +64,45 @@
     color: white;
 }
 
-.card > span > h4:first-child .fa-star{
+.card>span>h4:first-child .fa-star {
     font-size: small;
     padding: 0 5px 3px 0;
 
 }
 
 /* footer CSS */
-.footer{
+.footer {
     display: flex;
     justify-content: center;
-    background-color:gainsboro;
+    background-color: gainsboro;
     padding: 20px 0 20px;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
 }
 
-.footer > i{
+.footer>i {
     padding: 0 5px 0;
 }
 
-.search-area{
-    
-    display:flex;
+.search-area {
+
+    display: flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
 }
-.search-input{
+
+.search-input {
     width: 20rem;
-    box-sizing: border-box;  
+    box-sizing: border-box;
     padding: 4px;
     line-height: 10px;
     background-color: rgba(0, 0, 0, 0.1);
     margin: 20px;
 }
-.search-button{
-    box-sizing: border-box;  
+
+.search-button {
+    box-sizing: border-box;
     padding: 4px;
     margin-left: 6px;
     background: #424242;
@@ -107,12 +111,14 @@
     width: 4rem;
     cursor: pointer;
 }
+
 .search-button:hover {
     background: #1c1c1c;
     color: #fff;
-  }
-.log-btn{
-    box-sizing: border-box;  
+}
+
+.log-btn {
+    box-sizing: border-box;
     padding: 4px;
     margin-left: 6px;
     background: #424242;
@@ -123,14 +129,16 @@
     margin-top: 0.5rem;
     margin-right: 0.5rem;
     cursor: pointer;
-}  
+}
+
 .log-btn:hover {
     background: #1c1c1c;
     color: #fff;
 }
-.shimmer-box{
+
+.shimmer-box {
     margin: 20px;
     width: 200px;
-    height:300px;
+    height: 300px;
     background-color: lightgray;
 }

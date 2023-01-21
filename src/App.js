@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client"
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import {IMG_CDN_URL} from "./config"
-import { createBrowserRouter,RouterProvider,Outlet } from "react-router-dom";
+import { IMG_CDN_URL } from "./config"
+import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
 import About from "./components/About";
 import Contact from "./components/Contact";
 import Error from "./components/Error";
@@ -12,47 +12,47 @@ import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 
 
-const AppLayout =() =>{
-    return(
-    <>
-        <Header/>
-        <Outlet/>
-        <Footer/>
-    </>
+const AppLayout = () => {
+    return (
+        <>
+            <Header />
+            <Outlet />
+            <Footer />
+        </>
     );
 };
 
-const appRouter=createBrowserRouter([
+const appRouter = createBrowserRouter([
     {
-        path : "/",
-        element:<AppLayout/>,
-        errorElement:<Error/>,
-        children:[
+        path: "/",
+        element: <AppLayout />,
+        errorElement: <Error />,
+        children: [
             {
-                path:"/",
-                element:<Body/>
+                path: "/",
+                element: <Body />
             },
             {
-                path : "/about",
-                element:<About/>
+                path: "/about",
+                element: <About />
             },
             {
-                path:"/contact",
-                element:<Contact/>
+                path: "/contact",
+                element: <Contact />
             },
             {
-                path:"/cart",
-                element:<Cart/>
+                path: "/cart",
+                element: <Cart />
             },
             {
-                path:"/restaurant/:id",
-                element:<RestaurantMenu/>
+                path: "/restaurant/:id",
+                element: <RestaurantMenu />
             }
         ]
     },
-    
+
 ])
 
-const root=ReactDOM.createRoot(document.getElementById("root"));
+const root = ReactDOM.createRoot(document.getElementById("root"));
 
-root.render(<RouterProvider router={appRouter}/>);
+root.render(<RouterProvider router={appRouter} />);
