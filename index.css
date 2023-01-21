@@ -142,3 +142,6 @@
     height: 300px;
     background-color: lightgray;
 }
+.menu{
+    display: flex;
+}
