@@ -6,7 +6,8 @@ import Footer from "./components/Footer";
 import {IMG_CDN_URL} from "./config"
 import { createBrowserRouter,RouterProvider } from "react-router-dom";
 import About from "./components/About";
-
+import Contact from "./components/Contact";
+import Error from "./components/Error";
 
 const AppLayout =() =>{
     return(
@@ -15,18 +16,23 @@ const AppLayout =() =>{
         <Body/>
         <Footer/>
     </>
-    )
-}
+    );
+};
 
 const appRouter=createBrowserRouter([
     {
         path : "/",
-        element:<AppLayout/>
+        element:<AppLayout/>,
+        errorElement:<Error/>
     },
     {
         path : "/about",
         element:<About/>
-    }
+    },
+    {
+        path:"/contact",
+        element:<Contact/>
+    },
 ])
 
 const root=ReactDOM.createRoot(document.getElementById("root"));
