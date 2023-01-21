@@ -26,12 +26,8 @@ const Body =() => {
     
     if(!allRestaurants) return null;
     
-    if(filteredRestaurants?.length===0){
-      return (      
-        <h1>No Restaurant match your result</h1>
-      )
-    }
-    return (filteredRestaurants.length ===0 )? < Shimmer/>: (
+    
+    return filteredRestaurants?.length ===0 ? (< Shimmer/>): (
         <>
         <div className="search-area">
             <input

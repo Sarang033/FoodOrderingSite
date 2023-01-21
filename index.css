@@ -104,6 +104,7 @@
     border-radius: 0;
     color: #fff;
     width: 4rem;
+    cursor: pointer;
 }
 .search-button:hover {
     background: #1c1c1c;
@@ -120,8 +121,15 @@
     height: 3rem;
     margin-top: 0.5rem;
     margin-right: 0.5rem;
+    cursor: pointer;
 }  
 .log-btn:hover {
     background: #1c1c1c;
     color: #fff;
-  }
+}
+.shimmer-box{
+    margin: 20px;
+    width: 200px;
+    height:300px;
+    background-color: lightgray;
+}
