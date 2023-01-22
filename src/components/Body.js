@@ -13,6 +13,7 @@ const Body =() => {
     const[searchText,setSearchText]=useState("");
     const[filteredRestaurants,setFilteredRestaurants]=useState([])
     const[allRestaurants,setAllRestaurants]=useState([])
+
     useEffect(()=>{
       getRestaurants(); 
     },[]);
@@ -28,7 +29,7 @@ const Body =() => {
     if(!allRestaurants) return null;
     
     
-    return filteredRestaurants?.length ===0 ? (< Shimmer/>): (
+    return allRestaurants?.length ===0 ? (< Shimmer/>): (
         <>
         <div className="search-area">
             <input
@@ -52,7 +53,7 @@ const Body =() => {
 
         <div className="restaurant-list">
           {
-            filteredRestaurants.map(restaurant => {
+            filteredRestaurants.map((restaurant)=> {
               return (
               <Link to={"/restaurant/"+restaurant.data.id} key={restaurant.data.id}>
                 <RestaurantCard {...restaurant.data} /></Link>

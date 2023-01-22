@@ -3,9 +3,8 @@ import ReactDOM from "react-dom/client"
 import Body from "./components/Body";
 import Header from "./components/Header";
 import Footer from "./components/Footer";
-import { IMG_CDN_URL } from "./config"
 import { createBrowserRouter, RouterProvider, Outlet } from "react-router-dom";
-import About from "./components/About";
+import About from "./components/About";  
 import Contact from "./components/Contact";
 import Error from "./components/Error";
 import Cart from "./components/Cart";
