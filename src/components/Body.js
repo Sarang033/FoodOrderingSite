@@ -4,6 +4,7 @@ import { useState,useEffect} from "react";
 import Shimmer from "./Shimmer";
 import {Link} from "react-router-dom"
 import { filterData } from "../utils/helper";
+import useOnline from "../utils/useOnline.js";
 
 const Body =() => {
     const[searchText,setSearchText]=useState("");
@@ -21,7 +22,13 @@ const Body =() => {
       setAllRestaurants(json?.data?.cards[2]?.data?.data?.cards);
       setFilteredRestaurants(json?.data?.cards[2]?.data?.data?.cards);
     }
-    
+
+    const online=useOnline();
+
+    if(!online){
+      return <h1>Offline,please check your internet connection!!!</h1>
+    }    
+
     if(!allRestaurants) return null;
     
     
