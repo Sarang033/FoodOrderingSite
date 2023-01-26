@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+
 .header {
     display: flex;
     justify-content: space-between;
@@ -20,6 +26,7 @@
 .nav-items>ul>li {
     padding: 8px 15px 5px 10px;
     font-size: 20px;
+    cursor: pointer;
 }
 
 .logo {
@@ -32,15 +39,21 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    width: auto;
 }
 
 .card {
-    width: 200px;
+    width:200px;
     border-radius: 5px;
     box-shadow: -1px 4px 20px 14px rgba(0, 0, 0, 0.2);
     padding: 10px;
     margin: 10px;
     cursor: pointer;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
 }
 
 .card>img {
@@ -85,31 +98,38 @@
 }
 
 .search-area {
-
     display: flex;
     justify-content: center;
     align-items: center;
     justify-items: center;
+    position: relative;
 }
 
 .search-input {
-    width: 20rem;
-    box-sizing: border-box;
-    padding: 4px;
-    line-height: 10px;
-    background-color: rgba(0, 0, 0, 0.1);
-    margin: 20px;
+    width: 30%;
+  box-sizing: border-box;
+  border-bottom-left-radius: 5px;
+  border-top-left-radius: 5px;
+  background-color: #ffffff;
+  box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+  padding: 10px 15px 10px 15px;
+  border: 1px solid #aabcca;
+  border-right: 0;
+  color: #000000; 
+  outline: none;
 }
 
 .search-button {
-    box-sizing: border-box;
-    padding: 4px;
-    margin-left: 6px;
-    background: #424242;
-    border-radius: 0;
-    color: #fff;
-    width: 4rem;
+    border-bottom-right-radius: 5px;
+    border-top-right-radius: 5px;
+    background-color: #424242;
+    box-shadow: 1px 2px 4px 0 rgba(0, 0, 0, 0.08);
+    color: #ffffff;
+    padding: 10px 15px;
+    margin-left: -4px;
     cursor: pointer;
+    border: none;
+    outline: none;
 }
 
 .search-button:hover {
