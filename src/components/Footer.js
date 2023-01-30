@@ -3,7 +3,7 @@ const Footer =() =>{
         <div className="footer">
       Created By
       <i class="fa-solid fa-heart"></i>
-      <a href="https://www.linkedin.com/in/sarangsharma003/" target="_blank">
+      <a className="creator" href="https://www.linkedin.com/in/sarangsharma003/" target="_blank">
         Sarang Sharma
       </a>
     </div>

@@ -25,11 +25,26 @@ const RestaurantMenu = () => {
                 <h3>{restaurant?.costForTwoMsg}</h3>
             </div>
             <div>
-                <h1>Menu</h1>
-                <ul>
-                   {Object.values(restaurant?.menu?.items).map((item) => (
-                   <li key={item.id}>{item.name}</li>))}
-                </ul>
+            <table class="table">
+                <thead>
+                  <tr>
+                    <th scope="col">DISHES</th>
+                    <th scope="col">Veg/non-veg</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <th scope="row">
+                    {Object.values(restaurant?.menu?.items).map((item) => (
+                    <tr key={item.id}>{item.name}</tr>))}
+                    </th>
+                    <th scope="row">
+                    {Object.values(restaurant?.menu?.items).map((item) => (
+                    <tr key={item.id}>{item.attributes.vegClassifier}</tr>))}
+                    </th>
+                  </tr>
+                </tbody>
+              </table>
             </div>
         </div>
     )

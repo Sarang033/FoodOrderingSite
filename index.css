@@ -1,7 +1,9 @@
 * {
     margin: 0;
     padding: 0;
-    
+    text-decoration: none;
+    text-align: start;
+    color: #1c1c1c;
   }
 
 .header {
@@ -27,6 +29,7 @@
     padding: 8px 15px 5px 10px;
     font-size: 20px;
     cursor: pointer;
+    margin-top: 0.8rem;
 }
 
 .logo {
@@ -96,6 +99,9 @@
 .footer>i {
     padding: 0 5px 0;
 }
+.creator{
+    color: blue;
+}
 
 .search-area {
     display: flex;
@@ -140,7 +146,7 @@
 .log-btn {
     box-sizing: border-box;
     padding: 4px;
-    margin-left: 6px;
+    margin-left: 0.6rem;
     background: #424242;
     border-radius: 5px;
     color: #fff;
@@ -149,6 +155,7 @@
     margin-top: 0.5rem;
     margin-right: 0.5rem;
     cursor: pointer;
+    text-align: center;
 }
 
 .log-btn:hover {
