@@ -172,3 +172,15 @@
 .menu{
     display: flex;
 }
+
+.add-item-btn{
+    background-color: #323131;
+    color: #fff;
+    text-size-adjust: 2px;
+    border-radius: 3px;
+    width: 80px;
+    text-align: center;
+}
+.add-item-btn:hover{
+    background-color: #1c1c1c;
+}

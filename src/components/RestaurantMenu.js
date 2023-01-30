@@ -42,6 +42,8 @@ const RestaurantMenu = () => {
                     {Object.values(restaurant?.menu?.items).map((item) => (
                     <tr key={item.id}>{item.attributes.vegClassifier}</tr>))}
                     </th>
+                    {Object.values(restaurant?.menu?.items).map((item) => (
+                    <tr><button className="add-item-btn" key={item.id}>Add Item</button> </tr>))}
                   </tr>
                 </tbody>
               </table>
