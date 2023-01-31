@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useEffect, useState } from "react"
 import ReactDOM from "react-dom/client"
 import Body from "./components/Body";
 import Header from "./components/Header";
@@ -13,6 +13,12 @@ import Instamart from "./components/Instamart";
 
 
 const AppLayout = () => {
+    const [user,setUser]=useState({
+        name:"Sarang Sharma",
+        email:"sarangchamp2004@gmail.com"
+    });
+
+
     return (
         <>
             <Header />

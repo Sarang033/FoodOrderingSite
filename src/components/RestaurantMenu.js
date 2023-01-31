@@ -34,7 +34,7 @@ const RestaurantMenu = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th scope="row">
+                    <th  scope="row">
                     {Object.values(restaurant?.menu?.items).map((item) => (
                     <tr key={item.id}>{item.name}</tr>))}
                     </th>
