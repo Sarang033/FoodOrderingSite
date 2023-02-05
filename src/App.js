@@ -10,7 +10,8 @@ import Error from "./components/Error";
 import Cart from "./components/Cart";
 import RestaurantMenu from "./components/RestaurantMenu";
 import Instamart from "./components/Instamart";
-
+import { Provider } from "react-redux";
+import store from "./utils/store";
 
 const AppLayout = () => {
     const [user,setUser]=useState({
@@ -20,11 +21,11 @@ const AppLayout = () => {
 
 
     return (
-        <>
+        <Provider store={store}>
             <Header />
             <Outlet />
             <Footer />
-        </>
+        </Provider>
     );
 };
 
