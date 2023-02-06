@@ -14,8 +14,12 @@ const RestaurantMenu = () => {
    
     const dispatch = useDispatch();
 
-    const handleAddItem = () =>{
-      dispatch(addItem("grapes"))
+    // const handleAddItem = () =>{
+    //   dispatch(addItem("grapes"))
+    // }
+
+    const addFoodItem = (item) =>{
+      dispatch(addItem(item))
     }
 
     if(!restaurant){
@@ -39,7 +43,7 @@ const RestaurantMenu = () => {
                  </div> */}
             </div>
             <div>
-            <table class="table">
+            <table className="table">
                 <thead>
                   <tr>
                     <th scope="col">DISHES</th>
@@ -58,8 +62,8 @@ const RestaurantMenu = () => {
                     </th>
                     {Object.values(restaurant?.menu?.items).map((item) => (
                     <tr><button
-                    onClick={()=>handleAddItem()}
-                     className="add-item-btn"key={item.id}>Add Item</button></tr>))}
+                    onClick={()=>addFoodItem(item)}
+                     className="add-item-btn" key={item.id} >Add Item</button></tr>))}
                   </tr>
                 </tbody>
               </table>

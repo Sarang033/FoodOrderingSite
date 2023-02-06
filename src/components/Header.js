@@ -18,6 +18,7 @@ const Header = () => {
     const {user} =useContext(UserContext);
 
     const cartItems = useSelector((store)=> store.cart.items);
+    // console.log(cartItems)
 
     return (
         <div className="header">
@@ -30,7 +31,7 @@ const Header = () => {
                     <li><Link to="/about">About us</Link> </li>
                     <li><Link to="/contact">Contact  </Link> </li>
                     <li><Link to="/instamart">Instamart  </Link> </li>
-                    <li><Link to="/cart">Cart- {cartItems.length} items</Link> </li>
+                    <li><Link to="/cart">Cart-{cartItems.length} items</Link> </li>
                     <li><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </div>
