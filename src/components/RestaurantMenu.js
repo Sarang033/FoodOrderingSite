@@ -3,6 +3,8 @@ import { useParams } from "react-router-dom";
 import { IMG_CDN_URL } from "../config.js";
 import Shimmer from "./Shimmer.js";
 import useRestaurant from "../utils/useRestaurant.js";
+import { addItem } from "../utils/cartSlice.js";
+import { useDispatch } from "react-redux";
 
 
 const RestaurantMenu = () => {
@@ -10,6 +12,12 @@ const RestaurantMenu = () => {
     
     const restaurant =useRestaurant(id)
    
+    const dispatch = useDispatch();
+
+    const handleAddItem = () =>{
+      dispatch(addItem("grapes"))
+    }
+
     if(!restaurant){
         return <Shimmer/>
     }
@@ -23,6 +31,12 @@ const RestaurantMenu = () => {
                 <h3>{restaurant?.city}</h3>
                 <h3>{restaurant?.avgRating} Stars</h3>
                 <h3>{restaurant?.costForTwoMsg}</h3>
+                {/* <div>
+                <button
+                 onClick={()=>handleAddItem()}
+                 >Add Item
+                 </button>
+                 </div> */}
             </div>
             <div>
             <table class="table">
@@ -43,7 +57,9 @@ const RestaurantMenu = () => {
                     <tr key={item.id}>{item.attributes.vegClassifier}</tr>))}
                     </th>
                     {Object.values(restaurant?.menu?.items).map((item) => (
-                    <tr><button className="add-item-btn" key={item.id}>Add Item</button> </tr>))}
+                    <tr><button
+                    onClick={()=>handleAddItem()}
+                     className="add-item-btn"key={item.id}>Add Item</button></tr>))}
                   </tr>
                 </tbody>
               </table>

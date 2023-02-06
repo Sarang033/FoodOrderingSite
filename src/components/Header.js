@@ -1,6 +1,8 @@
 import { useState,useContext } from "react";
+import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import UserContext from "../utils/UserContext";
+
 const Title = () => (
     <a href="/">
         <img
@@ -15,6 +17,8 @@ const Header = () => {
 
     const {user} =useContext(UserContext);
 
+    const cartItems = useSelector((store)=> store.cart.items);
+
     return (
         <div className="header">
             <Title />
@@ -25,8 +29,8 @@ const Header = () => {
                     <li><Link to="/">Home</Link> </li>
                     <li><Link to="/about">About us</Link> </li>
                     <li><Link to="/contact">Contact  </Link> </li>
-                    <li><Link to="/cart">Cart  </Link> </li>
                     <li><Link to="/instamart">Instamart  </Link> </li>
+                    <li><Link to="/cart">Cart- {cartItems.length} items</Link> </li>
                     <li><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </div>
