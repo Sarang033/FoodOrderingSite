@@ -1,3 +1,17 @@
 node_modules
 dist/
 .parcel-cache
+
+# Large media files
+*.mp4
+*.tiff
+*.avi
+*.flv
+*.mov
+*.wmv
+
+
+
+.parcel-cache
+
+/coverage

@@ -187,6 +187,7 @@
 }
 .cart-items{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .cart-card {
