@@ -6,6 +6,7 @@ import UserContext from "../utils/UserContext";
 const Title = () => (
     <a href="/">
         <img
+        data-testid="logo"
             className="logo"
             alt="logo"
             src="https://www.clipartkey.com/mpngs/m/36-364962_healthy-food-logo-png.png" />
@@ -31,7 +32,7 @@ const Header = () => {
                     <li><Link to="/about">About us</Link> </li>
                     <li><Link to="/contact">Contact  </Link> </li>
                     <li><Link to="/instamart">Instamart  </Link> </li>
-                    <li><Link to="/cart">Cart-{cartItems.length} items</Link> </li>
+                    <li><Link to="/cart" data-testid="cart" >Cart-{cartItems.length} items</Link> </li>
                     <li><i class="fa-solid fa-cart-shopping"></i></li>
                 </ul>
             </div>

@@ -45,6 +45,8 @@ const Body =() => {
             }}
         />
         <button className="search-button"
+         data-testid="search-btn"
+         
         onClick={() =>{
           //filter the data out 
           // implementing search functionality
